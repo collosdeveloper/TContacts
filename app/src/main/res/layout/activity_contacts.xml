@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#979797">
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/drawable_search"
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/find_friends"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="#878787"/>
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/exp_view_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:groupIndicator="@drawable/group_indicator"
+        android:layout_below="@+id/rl_search"/>
+
+    <TextView
+        android:id="@+id/txt_view_empty_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColor="@android:color/darker_gray"
+        android:text="@string/no_search_result"/>
+</RelativeLayout>
